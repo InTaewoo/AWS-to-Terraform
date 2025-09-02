@@ -1,0 +1,23 @@
+# Local Terraform state, credentials, and logs
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl # 팀원과 프로바이더 버전을 맞추기 위해 .tf.lock.hcl은 커밋하는 것을 권장합니다.
+                   # 하지만 여기서는 제외 목록 예시로 포함했습니다. 필요에 따라 이 줄을 지워주세요.
+*.tfvars
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+crash.log
+
+# In-house modules
+.terraform/
+
+# Exclude all .tfvars files, which are likely to contain sensitive data, such as
+# password, private keys, and other secrets. These should not be in version control.
+# .tfvars.example files are okay to commit as they are templates.
+*.tfvars
+
+# Ignore any secrets files.
+secrets.txt
+*.secret
